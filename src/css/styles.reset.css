@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*:hover,
+*:focus {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  font: inherit;
+  background-color: inherit;
+  color: inherit;
+}
+html {
+  color-scheme: dark light;
+}
+body {
+  min-height: 100%;
+}
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+ol,
+ul {
+  list-style: none;
+}

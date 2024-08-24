@@ -1,0 +1,412 @@
+/*  Utility Classes  */
+:root {
+  --color-100: #f8f9fa;
+  --color-200: #e9ecef;
+  --color-300: #dee2e6;
+  --color-400: #ced4da;
+  --color-500: #adb5bd;
+  --color-600: #6c757d;
+  --color-700: #495057;
+  --color-800: #343a40;
+  --color-900: #212529;
+
+  --light: #f8f9fa;
+  --light-bg-subtle: #dee2e6;
+  --light-text: #343a40;
+  --light-border-subtle: #adb5bd;
+
+  --dark: #212529;
+  --dark-bg-subtle: #495057;
+  --dark-text: #e9ecef;
+  --dark-border-subtle: #6c757d;
+
+  --light-shadow: rgba(0, 0, 0, 0.1);
+  --dark-shadow: rgba(255, 255, 255, 0.1);
+
+  --primary: #0d6efd;
+  --primary-text: #052c65;
+  --primary-bg-subtle: #cfe2ff;
+  --primary-hover: #0a58ca;
+  --primary-border-subtle: #9ec5fe;
+
+  --success: #198754;
+  --success-hover: #145f3c;
+  --success-text: #0a3622;
+  --success-bg-subtle: #d1e7dd;
+  --success-border-subtle: #a3cfbb;
+
+  --info: #0dcaf0;
+  --info-hover: #0b97b4;
+  --info-text: #055160;
+  --info-bg-subtle: #cff4fc;
+  --info-border-subtle: #9eeaf9;
+
+  --warning: #ffc107;
+  --warning-hover: #eeb404;
+  --warning-text: #664d03;
+  --warning-bg-subtle: #fff3cd;
+  --warning-border-subtle: #ffe69c;
+
+  --danger: #dc3545;
+  --danger-hover: #bf2b39;
+  --danger-text: #58151c;
+  --danger-bg-subtle: #f8d7da;
+  --danger-border-subtle: #f1aeb5;
+
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #d63384;
+  --orange: #fd7e14;
+  --teal: #20c997;
+  --cyan: #0dcaf0;
+
+  --smooth-transition: 0.1s;
+  font-size: 10px;
+  font-family: Helvetica, Sans-Serif, Arial;
+}
+
+.--version {
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: Arial, Sans-Serif, Helvetica;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+[data-theme='Dark'] {
+  --light: var(--dark);
+  --light-bg-subtle: var(--dark-bg-subtle);
+  --light-text: var(--dark-text);
+  --light-border-subtle: var(--dark-border-subtle);
+
+  --light-shadow: var(--dark-shadow);
+}
+
+.btnHover:hover,
+.btnHover:focus-within {
+  box-shadow: 0 0 0 4px var(--light-border-subtle);
+}
+
+/***  Button  ***/
+.btn {
+  text-wrap: nowrap;
+  font-size: 2rem;
+  padding: 10px 25px;
+  margin: 0;
+  background-color: var(--light);
+  color: var(--light-text);
+  width: max-content;
+
+  border: 1px solid var(--light-border-subtle);
+  border-radius: 10px;
+  transition: box-shadow var(--smooth-transition) linear;
+}
+.btn:hover,
+.btn:focus {
+  box-shadow: 0 0 0 4px var(--light-border-subtle);
+}
+/*  Primary  */
+.btn.btn-primary {
+  background-color: var(--primary);
+  color: var(--color-100);
+  border-color: var(--primary-border-subtle);
+}
+.btn.btn-primary:hover,
+.btn.btn-primary:focus {
+  box-shadow: 0 0 0 4px var(--primary-border-subtle);
+}
+/*  Success  */
+.btn.btn-success {
+  background-color: var(--success);
+  color: var(--color-100);
+  border-color: var(--success-border-subtle);
+}
+.btn.btn-success:hover,
+.btn.btn-success:focus {
+  box-shadow: 0 0 0 4px var(--success-border-subtle);
+}
+/*  Warning  */
+.btn.btn-warning {
+  background-color: var(--warning);
+  color: var(--warning-text);
+  border-color: var(--warning-border-subtle);
+}
+.btn.btn-warning:hover,
+.btn.btn-warning:focus {
+  box-shadow: 0 0 0 4px var(--warning-border-subtle);
+}
+/*  Info  */
+.btn.btn-info {
+  background-color: var(--info);
+  color: var(--info-text);
+  border-color: var(--info-border-subtle);
+}
+.btn.btn-info:hover,
+.btn.btn-info:focus {
+  box-shadow: 0 0 0 4px var(--info-border-subtle);
+}
+/*  Danger  */
+.btn.btn-danger {
+  background-color: var(--danger);
+  color: var(--danger-text);
+  border-color: var(--danger-border-subtle);
+}
+.btn.btn-danger:hover,
+.btn.btn-danger:focus {
+  box-shadow: 0 0 0 4px var(--danger-border-subtle);
+}
+/*  Extra Small  */
+.btn.btn-xs {
+  padding: 5px 10px;
+  font-size: 1.5rem;
+}
+/*  Small  */
+.btn.btn-sm {
+  font-size: 1.7rem;
+  padding: 8px 15px;
+}
+/*  Large  */
+.btn.btn-lg {
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding: 10px 50px;
+}
+/*  Extra Large  */
+.btn.btn-xl {
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding-top: 10px;
+  min-width: max-content;
+  width: 100%;
+}
+/*Disabled*/
+.btn[disabled],
+.btn[disabled] {
+  filter: brightness(0.9);
+  background-color: var(--light);
+  color: var(--light-bg-subtle);
+  border: var(--light-border-subtle);
+}
+.btn[disabled]:hover,
+.btn[disabled]:focus {
+  box-shadow: none;
+}
+/***  Button End  ***/
+
+/***  List  ***/
+.list-heading {
+  font-size: 1.5rem;
+  color: var(--light-text);
+}
+.list-heading.hide {
+  display: none;
+}
+.list > .list-item {
+  background-color: var(--light);
+  color: var(--light-text);
+  border: 1px solid var(--light-border-subtle);
+  font-size: 2rem;
+  text-wrap: nowrap;
+  width: 100%;
+  margin-top: -1px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  transition:
+    background-color var(--smooth-transition) linear,
+    border-radius var(--smooth-transition) linear;
+}
+.list > .list-item:first-child,
+.list > .list-item:first-of-type {
+  margin-top: 0px;
+  border-radius: 10px 10px 0px 0px;
+}
+.list > .list-item:last-child,
+.list > .list-item:last-of-type {
+  border-radius: 0px 0px 10px 10px;
+}
+.list > .list-item:only-child {
+  border-radius: 10px;
+}
+.list > .list-item:hover,
+.list > .list-item:focus {
+  background-color: var(--light-bg-subtle);
+}
+
+.list > .list-item.active {
+  background-color: var(--primary);
+  color: var(--color-100);
+  border-color: var(--primary-border-subtle);
+}
+.list > .list-item.active + .list-item {
+  border-top-color: var(--primary-border-subtle);
+}
+.list > .list-item.active:hover,
+.list > .list-item.active:focus {
+  background-color: var(--primary);
+  color: var(--color-100);
+}
+
+.list-item > .content {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 5px;
+}
+.list-item > .content > .title {
+  touch-action: none;
+  pointer-events: none;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list-item > .content > .title > .date {
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-align: center;
+}
+.list-item > .content > .info {
+  touch-action: none;
+  pointer-events: none;
+  text-wrap: wrap;
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+.list-item > .content > .btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: max-content;
+}
+.list-item.active > .content > .btns > * {
+  background-color: var(--primary);
+  border-color: var(--color-100);
+  color: var(--color-100);
+}
+.list-item.active > .content > .btns > .btn:hover,
+.list-item.active > .content > .btns > .btn:focus {
+  box-shadow: 0 0 0 4px var(--primary-border-subtle);
+}
+
+/*  Disposable List Item  */
+.list-item > .close-btn {
+  min-width: 40px;
+  width: max-content;
+  height: 40px;
+  margin: 0 10px 0 0;
+  padding-top: 2px;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--light-text);
+  border: none;
+  font-size: 2.5rem;
+  transform: translateX(10px);
+}
+.list-item.active > .close-btn {
+  color: var(--color-100);
+  border-color: var(--color-100);
+}
+/***  List End  ***/
+
+/***  Dropdown  ***/
+.dropdown {
+  font-size: 2rem;
+  min-width: max-content;
+  width: max-content;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  position: relative;
+}
+.dropdown > .btn {
+  text-align: start;
+  width: max-content;
+  background-color: var(--light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.dropdown > .btn::after {
+  content: '';
+  padding: 4px;
+  border-radius: 2px;
+  border: solid var(--light-text);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  transform: rotate(45deg);
+  transition: transform var(--smooth-transition) linear;
+}
+.dropdown > .content {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+
+  position: absolute;
+  top: calc(100% + 20px);
+  z-index: 1;
+
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  box-shadow: 0 0 4px 2px var(--light-shadow);
+}
+.dropdown > .btn:hover::after,
+.dropdown > .btn:focus::after {
+  transform: rotate(-135deg);
+}
+.dropdown > *:has(+ .content:hover)::after,
+.dropdown > *:has(+ .content:focus-within)::after {
+  transform: rotate(-135deg);
+}
+.dropdown:hover .content,
+.dropdown:focus-within .content,
+.dropdown > .content:hover,
+.dropdown > .content:focus-within {
+  height: max-content;
+  opacity: 1;
+}
+.dropdown > .content > .list-item {
+  font-size: 2rem;
+  background-color: var(--light);
+  color: var(--light-text);
+  border: 0px solid var(--light-border-subtle);
+  padding: 10px 20px;
+  margin-top: -1px;
+  text-decoration: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+
+  transition:
+    border var(--smooth-transition) linear,
+    background-color var(--smooth-transition) linear;
+}
+.dropdown > .content > .list-item > .close-btn {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  line-height: 0;
+  transform: translateX(10px);
+}
+.dropdown > .content > .list-item:first-child,
+.dropdown > .content > .list-item:first-of-type {
+  margin-top: 0px;
+  border-radius: 10px 10px 0 0;
+}
+.dropdown > .content > .list-item:last-child,
+.dropdown > .content > .list-item:last-of-type {
+  border-radius: 0 0 10px 10px;
+}
+.dropdown > .content > .list-item:hover {
+  background-color: var(--light-border-subtle);
+}
+/***  Dropdown End  ***/
