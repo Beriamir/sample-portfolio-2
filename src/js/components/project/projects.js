@@ -5,7 +5,7 @@ const projectItems = [
     href: 'index.html',
     imgSrc: 'https://via.placeholder.com/300x200',
     title: 'ReactJS-Bootstrap: Amazon Prime Clone.',
-    description: `A brief description of your project. Highlight key features and
+    description: `A brief description of my project. Highlight key features and
       technologies used.
     `
   },
@@ -13,7 +13,7 @@ const projectItems = [
     href: 'index.html',
     imgSrc: 'https://via.placeholder.com/300x200',
     title: 'ReactJS: Messaging App.',
-    description: `A brief description of your project. Highlight key features and
+    description: `A brief description of my project. Highlight key features and
       technologies used.
     `
   },
@@ -21,7 +21,7 @@ const projectItems = [
     href: 'index.html',
     imgSrc: 'https://via.placeholder.com/300x200',
     title: 'Vanilla JavaScript: UI/UX Designs.',
-    description: `A brief description of your project. Highlight key features and
+    description: `A brief description of my project. Highlight key features and
       technologies used.
     `
   },
@@ -29,7 +29,7 @@ const projectItems = [
     href: 'index.html',
     imgSrc: 'https://via.placeholder.com/300x200',
     title: 'ReactTS-Bootstrap-PHP: Fully Working Shopping App.',
-    description: `A brief description of your project. Highlight key features and
+    description: `A brief description of my project. Highlight key features and
       technologies used.
     `
   }
