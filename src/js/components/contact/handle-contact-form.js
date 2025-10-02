@@ -27,11 +27,10 @@ export function handleContactForm(formId) {
 
             alert('SUCCESS! sent emails ' + newCount);
           },
-          error =>
-            alert(
-              error +
-                '. Something went wrong! please check your internet connection.'
-            )
+          (error) => {
+            console.error("EmailJS error:", error);
+            alert("Something went wrong: check console for details.");
+          }
         );
       });
   }
